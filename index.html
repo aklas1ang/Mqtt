@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>Mqtt Activity 3</title>
+    <style>
+        .orange {
+            background-color: #ffa31a;
+        }
+    </style>
+</head>
+
+<body style="background-color: #1b1b1b;">
+    <div class="container-fluid">
+        <div class="row mt-5 justify-content-center">
+            <div class="border rounded-3 border-2 border-light me-3 mt-1 p-0 col-4 col-md-4 overflow-auto">
+                <div class="card-header orange overflow-hidden">
+                    <h5 class="text-uppercase">Publisher</h5>
+                </div>
+                <div class="p-3">
+                    <label class="text-light">Topic</label>
+                    <input id="topic" type="text" class="form-control"><br>
+                    <label class="text-light">Payload</label>
+                    <input id="payload" type="text" class="form-control"><br>
+                    <a type="button" id="publish" class="btn orange">Publish</a>
+                </div>
+            </div>
+
+            <div class="border rounded-3 border-2 border-light me-3 mt-1 p-0 col-4 col-md-4 overflow-auto">
+                <div class="card-header orange overflow-hidden">
+                    <h5 class="text-uppercase">Subscriber</h5>
+                </div>
+                <div class="p-2">
+                    <label class="text-light">Topic</label>
+                    <input type="text" id="subTopic" class="form-control"><br>
+                    <a type="button" id="subscribe" class="btn orange">Subscribe</a>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center">
+            <div class="border rounded-3 border-2 border-light mt-1 p-0 col-6 col-md-6 overflow-auto">
+                <div class="card-header container-fluid orange overflow-hidden">
+                    <h5 class="text-uppercase">Incoming Messages</h5>
+                </div>
+                <div class="p-3">
+                    <table class="table table-light table-striped">
+                        <thead>
+                            <tr>
+                                <td>Topic</td>
+                                <td>Payload</td>
+                            </tr>
+                        </thead>
+                        <tbody id="message"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="browserMqtt.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+
+
+
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="col-sm-12">
+        <h1>MQTT</h1>
+        <div class="form-group container">
+            <div class="row">
+                <input id="pub-input" type="text">
+            </div>
+            <div class="row">
+                <button id="pub-button" class="btn btn-primary" value="">Publish</button>
+            </div>    
+        </div>
+    </div>
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./index.js"></script>
+</html> -->
